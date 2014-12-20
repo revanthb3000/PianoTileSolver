@@ -19,7 +19,7 @@ public class MainClass {
 			}
 			//System.out.println(activeTile);
 			MouseActions.clickPosition(activeSetPoints.get(activeTile));
-			Thread.sleep(100);
+			Thread.sleep(200);
 		}
 	}
 
