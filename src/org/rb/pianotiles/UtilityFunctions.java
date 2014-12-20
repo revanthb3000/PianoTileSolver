@@ -82,7 +82,7 @@ public class UtilityFunctions {
 		int delta2 = (y1-y2)/numberOfTiles;
 		
 		int x = x1 + delta1/2;
-		int y = y1 - (3*delta2)/2;
+		int y = y1 - delta2 - (delta2)/5;
 		
 		for(int i=0;i<numberOfTiles;i++){
 			activeSet.add(new PointPosition(x, y));
@@ -102,6 +102,7 @@ public class UtilityFunctions {
 		int threshold = 100;
 		while(blackTile<points.size()){
 			Color color = MouseActions.getPointColor(points.get(blackTile));
+//			System.out.println(color);
 			if((color.getRed()<threshold)&&(color.getBlue()<threshold)&&(color.getGreen()<threshold)){
 				break;
 			}

@@ -9,7 +9,7 @@ public class MainClass {
 	public static void main(String[] args) throws InterruptedException{
 		int[] values = UtilityFunctions.loadConfiguration();
 		ArrayList<PointPosition> activeSetPoints = UtilityFunctions.getActiveSetPoints(values, 4);
-		int numberOfIterations = 100;
+		int numberOfIterations = 50;
 		System.out.println("Make the Blustacks window active !");
 		Thread.sleep(5000);
 		for(int i=0;i<numberOfIterations;i++){
@@ -17,9 +17,9 @@ public class MainClass {
 			while(activeTile==4){
 				activeTile = UtilityFunctions.getActiveTile(activeSetPoints);
 			}
-			//System.out.println(activeTile);
+			System.out.println(activeTile);
 			MouseActions.clickPosition(activeSetPoints.get(activeTile));
-			Thread.sleep(200);
+			Thread.sleep(125);
 		}
 	}
 
